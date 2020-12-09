@@ -1,0 +1,26 @@
+<div class="card mx-auto">
+	<div class="card-header">
+        New %table%
+    </div>
+
+    <div class="card-body">
+        <form [formGroup]="%table%Form" novalidate> 
+%form_fields%                
+%form_nested%
+%pre-option%
+%options%
+%pos-option%
+            <div class=" form-group">
+                <button (click)="%table%List.save(%table%Form.value)" type="button" [disabled]="!%table%Form.valid" 
+                class="btn btn-info btn-block">
+                  Save %table%
+                </button>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+<app-%table%-list
+#%table%List
+></app-%table%-list>

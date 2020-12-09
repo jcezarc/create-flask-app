@@ -1,0 +1,75 @@
+{
+    "tables": [
+        {
+            "table": "User",
+            "pk_field": "name",
+            "field_list": {
+                "name": "str",
+                "gender": "str",
+                "age": "str",
+                "photo": "str"
+            },
+            "Angular":{
+                "title": "name",
+                "image": "photo",
+                "label": "age",
+                "label-colors":{
+                    "red": "< 18",
+                    "yellow": "18 - 29",
+                    "green": "30 - 49",
+                    "blue": "50 >"
+                },
+                "detail": "gender"
+            }
+        },
+        {
+            "table": "Movie",
+            "pk_field": "name",
+            "field_list": {
+                "name": "str",
+                "txSynopsis": "str",
+                "genre": "str",
+                "poster": "str"
+            },
+            "Angular": {
+                "title": "name",
+                "image": "poster",
+                "label": "genre",
+                "label-colors": {
+                    "green":"sci-fi",
+                    "red": "thriller",
+                    "yellow": "drama",
+                    "blue": "comedy"
+                },
+                "detail": "txSynopsis"
+            }
+        },
+        {
+            "table": "Recommend",
+            "pk_field": "Comments",
+            "field_list": {
+                "Comments": "str"
+            },
+            "Angular": {
+                "image": "movie.poster",
+                "title": "Comments",
+                "label": "movie",
+                "detail": "viewer"
+            },
+            "nested": {
+                "movie": "Movie",
+                "viewer": "User"
+            }
+        }
+    ],
+    "db_type": "postgres",
+    "db_config": {
+        "dialect": "postgresql",
+        "driver": "psycopg2",
+        "username": "postgres",
+        "password": "123",
+        "host": "localhost",
+        "port": "5432",
+        "database": "myDB"
+    }
+}

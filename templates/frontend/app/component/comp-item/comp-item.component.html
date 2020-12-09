@@ -1,0 +1,27 @@
+<div class="card mt-4">
+    <div class="row">
+        <div class="col-4">    
+            %img_tag%
+        </div>
+        <div class="col-6">
+            <h4>
+                {{%table%.%title%}}
+            </h4>
+        </div>
+        <ng-content></ng-content>
+    </div>
+    <div class="row">
+
+        <div class="col-4 mx-1">
+%colors%
+%other%
+        </div>
+
+        <div class="col-6">
+            <span class="text-muted small">
+                {{%table%.%detail%}}
+            </span>
+        </div>
+
+    </div>
+</div>

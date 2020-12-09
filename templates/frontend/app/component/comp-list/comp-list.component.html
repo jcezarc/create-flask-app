@@ -1,0 +1,19 @@
+<div class="row">
+
+  <div *ngFor="let %table% of Navigator.view(items)" class="col-sm-6 col-xs-12">
+    <app-%table%-item [%table%]="%table%">
+          <div>
+              <app-delete-button (delete)="remove(%table%)">
+              </app-delete-button>
+%export_button%            
+          </div>
+    </app-%table%-item>
+  </div>
+  <h4 *ngIf="!items" class="jumbotron ml-4">%table% Not found. :(</h4>
+  
+</div>
+
+<app-navigator 
+  [maxItems]="4"
+  #Navigator
+></app-navigator>
